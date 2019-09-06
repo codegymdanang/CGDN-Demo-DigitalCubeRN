@@ -1,0 +1,29 @@
+{
+  "presets": ["module:metro-react-native-babel-preset"],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./App"],
+      "extensions": [".ios.js", ".android.js", ".js", ".json"],
+      "alias": {
+        "@actions": "./App/Actions",
+        "@apis": "./App/Apis",
+        "@assets": "./App/Assets",
+        "@components": "./App/Components",
+        "@config": "./App/Config",
+        "@constants": "./App/Constants",
+        "@containers": "./App/Containers",
+        "@navigators": "./App/Navigators",
+        "@sagas": "./App/Sagas",
+        "@selectors": "./App/Selectors",
+        "@services": "./App/Services",
+        "@stores": "./App/Stores",
+        "@theme": "./App/Theme",
+      }
+    }]
+  ],
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    }
+  }
+}
